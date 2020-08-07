@@ -269,9 +269,10 @@
                   src="https://source.unsplash.com/wgq4eit198Q/700x400"
                   alt="First Slide"
                 />
-                <div class="carousel-caption d-none d-md-block">
+                <!-- CAPTIONs HIDE SHOW with d-none and d-sm-block d-SCREENSIZE-block sets this up! -->
+                <div class="carousel-caption d-none d-sm-block">
                   <h3>Slide One</h3>
-                  <p>describe slide one here</p>
+                  <p>slide one d-sm-block</p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -280,9 +281,9 @@
                   src="https://source.unsplash.com/WLUHO9A_xik/700x400"
                   alt="Second Slide"
                 />
-                <div class="carousel-caption d-none d-md-block">
-                  <h3>Slide TWO</h3>
-                  <p>describe slide TWO here</p>
+                <div class="carousel-caption d-none d-sm-inline-block">
+                  <h3>Slide TWO</h3> 
+                  <p>slide TWO d-sm-inline-block</p>
                 </div>
               </div>
               <div class="carousel-item">
@@ -291,9 +292,9 @@
                   src="https://source.unsplash.com/4yta6mU66dE/700x400"
                   alt="Third Slide"
                 />
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-inline-flex">
                   <h3>Slide THREE</h3>
-                  <p>describe slide THREE here</p>
+                  <p>slide THREE d-inline-flex</p>
                 </div>
               </div>
             </div>
@@ -331,6 +332,32 @@
       integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
       crossorigin="anonymous"
     ></script>
-    <script></script>
+    <script>
+      // target by $('carousel') to get All the carousels or by ID #idGiven for one div properties
+      $('#slider4').carousel({
+        interval: 1000,
+        keyboard: true,
+        pause: 'hover'
+      });
+
+      // $('#slider4').on('slide.bs.carousel', function(){
+      //   console.log('SLIDE from #slider4')
+      // });
+
+      // $('#slider4').on('slid.bs.carousel', function(){
+      //   console.log('SLID from #slider4')
+      // });
+
+      $("#slider4").on("click", function(e){ 
+        // hmm .slick-active not here but the info is interesting
+        //var slideClicked = $(this).find(".slick-active").attr("data-slick-index"); 
+        var info = $(e.currentTarget);
+        var slideFrom = $(this).find('.active').index();
+        console.log("You Clicked Image Index: " + slideFrom);
+        //console.log(e); 
+        //console.log(info);
+      });
+
+    </script>
   </body>
 </html>
