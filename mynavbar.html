@@ -48,7 +48,9 @@
 
     <!--##################START HERE###################-->
 
-    <!-- NAVBAR WITH FORM Two -->
+   
+    
+     <!-- NAVBAR WITH FORM Two -->
     <nav class="navbar navbar-expand-md navbar-dark bg-success mb-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">NavbarFF</a>
@@ -75,8 +77,16 @@
             </li>
           </ul>
           <form class="form-inline ml-auto">
+            <select class="form-control select2">
+                <option>Select</option> 
+                <option>Car</option> 
+                <option>Bike</option> 
+                <option>Scooter</option> 
+                <option>Cycle</option> 
+                <option>Horse</option> 
+             </select>
             <input
-              id="location"
+              id="locationx"
               type="text"
               class="form-control mr-2"
               placeholder="Search"
@@ -89,35 +99,45 @@
       </div>
     </nav>
 
-    <!-- NAVBAR WITH DROPDOWN -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">NavbarDD</a>
+    <!-- NAVBAR WITH FORM Better -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-success mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">NavbarF3</a>
+        <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarNavF3"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavF3">
         <ul class="navbar-nav">
-          <li class="navbar-item">
+            <li class="navbar-item">
             <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="navbar-item">
+            </li>
+            <li class="navbar-item">
             <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
-              >Dropdown</a
-            >
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">Link 1</a>
-              <a href="#" class="dropdown-item">Link 2</a>
-              <a href="#" class="dropdown-item">Link 3</a>
-            </div>
-          </li>
-          <li class="navbar-item">
+            </li>
+            <li class="navbar-item">
             <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="navbar-item">
+            </li>
+            <li class="navbar-item">
             <a class="nav-link" href="#">Contact</a>
-          </li>
+            </li>
         </ul>
-      </div>
+        <form class="form-inline ml-auto">
+            <input type="text" name="product" list="productName" id="location" class="form-control mr-2" placeholder="address.."/>
+            <datalist id="productName">
+                <option value="Pen">Pen</option>
+                <option value="Pencil">Pencil</option>
+                <option value="Paper">Paper</option>
+            </datalist>
+            <button class="btn" type="button" onclick="flyTo()">
+            <i class="btn fa fa-search"></i>
+            </button>
+        </form>
+        </div>
+    </div>
     </nav>
 
 
