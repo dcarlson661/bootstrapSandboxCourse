@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- https://fontawesome.com/v4.7.0/icons/ -->
     <script>
       //called on flyto button click to locate the address or lat,lon in the textbox
       // or to do radar or text google places search search
@@ -67,11 +68,14 @@
             <li class="navbar-item">
                 <button class="btn" type="button" onclick="flyTo()">
                     <i class="btn fa fa-search"></i>
-                    </button>
+                </button>
+                <button class="btn btn-primary" type="button">Regular Button</button>
+                <button class="btn btn-primary active" type="button">Active Button</button>
+                <button class="btn btn-primary disabled" type="button">Disabled Button</button>
             </li>
             <li class="navbar-item">
                 <button class="btn btn-primary btn-group-sm" type="button">
-                    <i class="fa fa-industry"></i>View</button>
+                    <i class="fa fa-arrows-alt"></i>   View</button>
             </li>
             <li class="navbar-item">
             <a class="nav-link" href="#">Contact</a>
