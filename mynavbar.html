@@ -48,57 +48,6 @@
 
     <!--##################START HERE###################-->
 
-   
-    
-     <!-- NAVBAR WITH FORM Two -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-success mb-3">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">NavbarFF</a>
-        <button
-          class="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#navbarNavFF"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavFF">
-          <ul class="navbar-nav">
-            <li class="navbar-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="navbar-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="navbar-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="navbar-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-          <form class="form-inline ml-auto">
-            <select class="form-control select2">
-                <option>Select</option> 
-                <option>Car</option> 
-                <option>Bike</option> 
-                <option>Scooter</option> 
-                <option>Cycle</option> 
-                <option>Horse</option> 
-             </select>
-            <input
-              id="locationx"
-              type="text"
-              class="form-control mr-2"
-              placeholder="Search"
-            />
-            <button class="btn" type="button" onclick="flyTo()">
-              <i class="btn fa fa-search"></i>
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-
     <!-- NAVBAR WITH FORM Better -->
     <nav class="navbar navbar-expand-md navbar-dark bg-success mb-3">
     <div class="container-fluid">
@@ -116,21 +65,29 @@
             <a class="nav-link" href="#">Home</a>
             </li>
             <li class="navbar-item">
-            <a class="nav-link" href="#">About</a>
+                <button class="btn" type="button" onclick="flyTo()">
+                    <i class="btn fa fa-search"></i>
+                    </button>
             </li>
             <li class="navbar-item">
-            <a class="nav-link" href="#">Services</a>
+                <button class="btn btn-primary btn-group-sm" type="button">
+                    <i class="fa fa-industry"></i>View</button>
             </li>
             <li class="navbar-item">
             <a class="nav-link" href="#">Contact</a>
             </li>
         </ul>
         <form class="form-inline ml-auto">
-            <input type="text" name="product" list="productName" id="location" class="form-control mr-2" placeholder="address.."/>
+            <input type="text" name="product" list="productName" 
+                   id="location" class="form-control mr-2" placeholder="address.."/>
             <datalist id="productName">
-                <option value="Pen">Pen</option>
-                <option value="Pencil">Pencil</option>
-                <option value="Paper">Paper</option>
+                <option value="airport">airport</option>
+                <option value="city_hall">city_hall</option>
+                <option value="fire_station">fire_station</option>
+                <option value="hospital">hospital</option>
+                <option value="school">school</option>
+                <option value="stadium">stadium</option>
+                <option value="university">university</option>
             </datalist>
             <button class="btn" type="button" onclick="flyTo()">
             <i class="btn fa fa-search"></i>
