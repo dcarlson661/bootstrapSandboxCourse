@@ -26,6 +26,22 @@
 
     <script>
 
+      function handle(e) 
+      {
+          //onkeypress="handle(event)" type="text" on <input text boxes to handle the enter key or other keypress
+          if (e.srcElement.id === 'location')
+          {
+              if (e.keyCode === 13) {
+                  flyTo();
+                  alert("Fly To");
+              }
+          }
+          //for numbers only on typed input try this
+          //if (keyCode > 47 && keyCode < 58) {
+          //    e.preventDefault();
+          //}
+      }
+
       function OnSearchDDLChange(s)
       {
           var search = document.getElementById('location').value = s;
@@ -88,6 +104,7 @@
                     class="form-control input-sm" 
                     placeholder="address" 
                     autocomplete="off"
+                    onkeypress="handle(event)"
                     list="productName" 
                     />
               <datalist id="productName">
@@ -140,10 +157,6 @@
     <br />
     </div>
 
-    <script>
-      // Get the current year for the copyright
-      $("#year").text(new Date().getFullYear());
-    </script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
