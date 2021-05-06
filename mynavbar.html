@@ -10,13 +10,32 @@
       integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
       crossorigin="anonymous"
     />
-    <!-- Load icon library -->
+    <!-- Load icon library https://fontawesome.com/v4.7.0/icons/-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- https://fontawesome.com/v4.7.0/icons/ -->
+
+    <style>
+      .checkboxes{
+            margin-top: 2px;
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+    </style>
+
     <script>
+
+      function OnSearchDDLChange(s)
+      {
+          var search = document.getElementById('location').value = s;
+          alert("ddl");
+      }
+      function onCheckChanged(cb)
+      {
+        alert(cb);
+      }
+
       //called on flyto button click to locate the address or lat,lon in the textbox
       // or to do radar or text google places search search
       function flyTo() {
@@ -43,71 +62,88 @@
 
   <body>
     <header>
-      <h1 class="display-3 text-center my-4">My Navbar</h1>
-      <hr />
     </header>
 
     <!--##################START HERE###################-->
 
-    <!-- NAVBAR WITH FORM Better -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-success mb-3">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">NavbarF3</a>
-        <button
-        class="navbar-toggler"
-        data-toggle="collapse"
-        data-target="#navbarNavF3"
-        >
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavF3">
-        <ul class="navbar-nav">
-            <li class="navbar-item">
-            <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="navbar-item">
-                <button class="btn" type="button" onclick="flyTo()">
-                    <i class="btn fa fa-search"></i>
+    <!-- NAVBAR WITH FORM and checkboxes  <span id="year"></span>  -->
+    <nav class="navbar navbar-dark bg-success" style="padding: 0;">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="http://www.safeenv.com">
+            <small class="text-warning"><cite title="Safe Environment Engineering Inc.">
+              &copy;2010-<script>document.write(new Date().getFullYear())</script> Safeenv.com  v.3.x</cite></small>
+          </a>
+          <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarNavF3"
+          >
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavF3">
+          <form class="form-control-sm ">
+              <input type="text" 
+                    name="product"  
+                    id="location" 
+                    class="form-control input-sm" 
+                    placeholder="address" 
+                    autocomplete="off"
+                    list="productName" 
+                    />
+              <datalist id="productName">
+                  <option value="airport">airport</option>
+                  <option value="city_hall">city_hall</option>
+                  <option value="fire_station">fire_station</option>
+                  <option value="hospital">hospital</option>
+                  <option value="school">school</option>
+                  <option value="stadium">stadium</option>
+                  <option value="university">university</option>
+                  <option value="28320 Constellation Road, Valencia, Ca. 91355"></option>
+              </datalist>
+          </form>  
+          <ul class="navbar-nav">
+              <li class="navbar-item">
+                <button class="btn btn-success btn-sm" type="button" onclick="flyTo()">
+                  <i class="fa fa-map"></i>
+                  Map
                 </button>
-                <button class="btn btn-primary" type="button">Regular Button</button>
-                <button class="btn btn-primary active" type="button">Active Button</button>
-                <button class="btn btn-primary disabled" type="button">Disabled Button</button>
-            </li>
-            <li class="navbar-item">
-                <button class="btn btn-primary btn-group-sm" type="button">
-                    <i class="fa fa-arrows-alt"></i>   View</button>
-            </li>
-            <li class="navbar-item">
-            <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
-        <form class="form-inline ml-auto">
-            <input type="text" name="product" list="productName" 
-                   id="location" class="form-control mr-2" placeholder="address.."/>
-            <datalist id="productName">
-                <option value="airport">airport</option>
-                <option value="city_hall">city_hall</option>
-                <option value="fire_station">fire_station</option>
-                <option value="hospital">hospital</option>
-                <option value="school">school</option>
-                <option value="stadium">stadium</option>
-                <option value="university">university</option>
-            </datalist>
-            <button class="btn" type="button" onclick="flyTo()">
-            <i class="btn fa fa-search"></i>
-            </button>
-        </form>
-        </div>
-    </div>
-    </nav>
-
+              </li>
+              <li class="navbar-item">
+                <button class="btn btn-sm btn-success" type="button" onclick="OnSearchDDLChange(this.value)">
+                  <i class="fa fa-map-signs"></i>
+                  MapPlaces</button>
+              </li>     
+              <li class="navbar-item">
+                <button class="btn btn-sm btn-success" type="button" onclick="flyTo()">
+                  <i class="fa fa-skyatlas"></i>
+                  View
+                </button>
+              </li>
+              <li class="navbar-item">
+                <button class="btn btn-sm btn-success" type="button" type="button">
+                  <i class="fa fa-street-view fa-sm"></i>Street View</button>
+              </li>
+              <li class="navbar-item">
+                <input type="checkbox" onclick=onCheckChanged(this) id="Radar"  value="Radar"></input>     
+                <label for="Radar" class="btn-success"> Radar</label><br>
+              </li> 
+              <li class="navbar-item">
+                <input type="checkbox"  onclick=onCheckChanged(this) id="Traffic" value="Trf"></input>
+                <label for="Traffic" class="btn-success"> Traffic</label><br>
+              </li>
+          </ul>
+          </div>
+      </div>
+    </nav>   
 
     <br />
     <br />
     </div>
-    <!-- ./container -->
-    <div style="margin-top: 500px"></div>
 
+    <script>
+      // Get the current year for the copyright
+      $("#year").text(new Date().getFullYear());
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
