@@ -52,6 +52,31 @@
         alert(cb);
       }
 
+      function setViewAllMarkers(tfUnused)
+      {
+        alert("setviewallmarkers");
+          //on the html we have a checkbox to turn off changing the map view
+          // when the control calls this after mapping markers and lines.
+          //This is because the user doesn't have to click the ctrl check box to get to some autozoom setting
+          //if (!autoCenterAfterPuttongMarkersAndLinesFromTheControl) return;
+          if (markers == undefined) return;        
+          var bounds   = new google.maps.LatLngBounds();
+
+          for (var m in markers) {
+              var marker = markers[m];
+              bounds.extend(marker.getPosition());
+          }
+          map.setCenter(bounds.getCenter());
+          map.fitBounds(bounds);
+          //map.setZoom(map.getZoom() - 1);
+      }
+
+      function ToggleStreetView()
+      {
+        alert("toggle street view");
+          //streetView("use", "center");
+      }
+
       //called on flyto button click to locate the address or lat,lon in the textbox
       // or to do radar or text google places search search
       function flyTo() {
@@ -131,13 +156,13 @@
                   MapPlaces</button>
               </li>     
               <li class="navbar-item">
-                <button class="btn btn-sm btn-success" type="button" onclick="flyTo()">
+                <button class="btn btn-sm btn-success" type="button" onclick="setViewAllMarkers()">
                   <i class="fa fa-skyatlas"></i>
                   View
                 </button>
               </li>
               <li class="navbar-item">
-                <button class="btn btn-sm btn-success" type="button" type="button">
+                <button class="btn btn-sm btn-success" type="button" onclick="ToggleStreetView()">
                   <i class="fa fa-street-view fa-sm"></i>Street View</button>
               </li>
               <li class="navbar-item">
