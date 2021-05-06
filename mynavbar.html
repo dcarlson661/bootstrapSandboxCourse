@@ -42,10 +42,23 @@
           //}
       }
 
+      function CallSearch(placesSearchWord)
+      {
+        var search = document.getElementById('location').value;
+        if (placesSearchWord) 
+        {
+            search = placesSearchWord;
+            alert(placesSearchWord);
+        }
+        else
+        {
+          alert(search);
+        }
+      }
       function OnSearchDDLChange(s)
       {
           var search = document.getElementById('location').value = s;
-          alert("ddl");
+          alert("updatelocation");
       }
       function onCheckChanged(cb)
       {
@@ -151,7 +164,7 @@
                 </button>
               </li>
               <li class="navbar-item">
-                <button class="btn btn-sm btn-success" type="button" onclick="OnSearchDDLChange(this.value)">
+                <button class="btn btn-sm btn-success" type="button" id="searchbtn"  onclick="CallSearch()">
                   <i class="fa fa-map-signs"></i>
                   MapPlaces</button>
               </li>     
