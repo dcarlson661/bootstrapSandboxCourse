@@ -26,6 +26,11 @@
 
     <script>
 
+      function collapse()
+      {
+        let navMain = $("navbarNavF3");
+        navMain.collapse('hide');
+      }
       function handle(e) 
       {
           //onkeypress="handle(event)" type="text" on <input text boxes to handle the enter key or other keypress
@@ -79,10 +84,8 @@
           {
           }
         }
-        else
-        {
-          alert(cb);
-        }
+        
+        collapse();
       }
       function onOptionClick(opt)
       {
@@ -116,22 +119,12 @@
 
       //called on flyto button click to locate the address or lat,lon in the textbox
       // or to do radar or text google places search search
-      function flyTo() {
-        //not ready for prime time with a combo because you need to allow edit and updates
-        //var selectCtrl = document.getElementById("locationCombo");
-        //var address    = selectCtrl.options[selectCtrl.selectedIndex].value;
+      function flyTo() 
+      {
         var address = document.getElementById("location").value;
-        alert(address);
-        geocoder.geocode({ address: address }, function (results, status) {
-          if (status === google.maps.GeocoderStatus.OK) {
-            map.setCenter(results[0].geometry.location);
-            map.setZoom(zoomValOnEvent);
-          } else {
-            alert(
-              "Geocode was not successful for the following reason: " + status
-            );
-          }
-        });
+        console.log(address);
+        //alert(address);
+        collapse();
       }
     </script>
 
@@ -147,7 +140,7 @@
     <!-- NAVBAR WITH FORM and checkboxes  <span id="year"></span>  -->
     <nav class="navbar navbar-dark bg-success" style="padding: 0;">
       <div class="container-fluid">
-          <a class="navbar-brand" href="http://www.safeenv.com">
+          <a class="navbar-brand" href="http://www.safeenv.com" target="_blank">
             <!-- <img
             src="http://seeicbrne.net/plumes/images/default.jpg"
             alt="group" 
