@@ -41,6 +41,10 @@
           //    e.preventDefault();
           //}
       }
+      function clearLocation()
+      {
+        document.getElementById('location').value = "";
+      }
 
       function CallSearch(placesSearchWord)
       {
@@ -164,9 +168,10 @@
                     name="product"  
                     id="location" 
                     class="form-control input-sm" 
-                    placeholder="address" 
+                    placeholder="Click for suggestions or type in your own. DOUBLE-Click to clear."
                     autocomplete="off"
                     onkeypress="handle(event)"
+                    ondblclick="clearLocation()"
                     list="productName" 
                     />
               <datalist id="productName">
@@ -195,12 +200,12 @@
               <li class="navbar-item">
                 <button class="btn btn-sm btn-success" type="button" onclick="setViewAllMarkers()">
                   <i class="fa fa-skyatlas"></i>
-                  View
+                  View all markers
                 </button>
               </li>
               <li class="navbar-item">
                 <button class="btn btn-sm btn-success" type="button" onclick="ToggleStreetView()">
-                  <i class="fa fa-street-view fa-sm"></i>Street View</button>
+                  <i class="fa fa-street-view fa-sm"></i> Street View</button>
               </li>
               <li class="navbar-item">
                 <input type="checkbox" onclick=onCheckChanged(this) id="Radar"  value="Radar"></input>     
@@ -208,7 +213,15 @@
               </li> 
               <li class="navbar-item">
                 <input type="checkbox"  onclick=onCheckChanged(this) id="Traffic" value="Trf"></input>
-                <label for="Traffic" class="btn-success"> Traffic</label><br>
+                <label for="Traffic" class="btn-success"> Show Current Traffic</label><br>
+              </li>
+              <li class="navbar-item">
+                <input type="checkbox" onclick=onCheckChanged(this) id="ViewAsMap" value="asmap"></input>
+                <label for="ViewAsMap" class="btn-success"> Toggle Map as Roadmap or Satellite</label><br>
+              </li>
+              <li class="navbar-item">
+                  <input type="checkbox" onclick=onCheckChanged(this) id="ViewAsHybredOrTerrain" value="ashyte"></input>
+                  <label for="ViewAsHybredOrTerrain" class="btn-success"> Toggle Map as hybred or terrain</label><br>
               </li>
               <li class="navbar-item">
                 <input type="checkbox"  onclick=onCheckChanged(this) id="Test" value="Test"></input>
