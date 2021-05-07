@@ -88,46 +88,17 @@
       function setViewAllMarkers(tfUnused)
       {
         alert("setviewallmarkers");
-          //on the html we have a checkbox to turn off changing the map view
-          // when the control calls this after mapping markers and lines.
-          //This is because the user doesn't have to click the ctrl check box to get to some autozoom setting
-          //if (!autoCenterAfterPuttongMarkersAndLinesFromTheControl) return;
-          if (markers == undefined) return;        
-          var bounds   = new google.maps.LatLngBounds();
-
-          for (var m in markers) {
-              var marker = markers[m];
-              bounds.extend(marker.getPosition());
-          }
-          map.setCenter(bounds.getCenter());
-          map.fitBounds(bounds);
-          //map.setZoom(map.getZoom() - 1);
       }
 
       function ToggleStreetView()
       {
         alert("toggle street view");
-          //streetView("use", "center");
       }
 
       //called on flyto button click to locate the address or lat,lon in the textbox
       // or to do radar or text google places search search
-      function flyTo() {
-        //not ready for prime time with a combo because you need to allow edit and updates
-        //var selectCtrl = document.getElementById("locationCombo");
-        //var address    = selectCtrl.options[selectCtrl.selectedIndex].value;
-        var address = document.getElementById("location").value;
-        alert(address);
-        geocoder.geocode({ address: address }, function (results, status) {
-          if (status === google.maps.GeocoderStatus.OK) {
-            map.setCenter(results[0].geometry.location);
-            map.setZoom(zoomValOnEvent);
-          } else {
-            alert(
-              "Geocode was not successful for the following reason: " + status
-            );
-          }
-        });
+      function flyTo() 
+      {
       }
     </script>
 
@@ -143,13 +114,9 @@
     <!-- NAVBAR WITH FORM and checkboxes  <span id="year"></span>  -->
     <nav class="navbar navbar-dark bg-success" style="padding: 0;">
       <div class="container-fluid">
-          <a class="navbar-brand" href="http://www.safeenv.com">
-            <!-- <img
-            src="http://seeicbrne.net/plumes/images/default.jpg"
-            alt="group" 
-            /> -->
+          <a class="navbar-brand" href="#">
             <small class="text-warning"><cite title="Safe Environment Engineering Inc.">
-              &copy;2010-<script>document.write(new Date().getFullYear())</script> Safeenv.com  v.3.x</cite></small>
+              &copy;2010-<script>document.write(new Date().getFullYear())</script> me  v.3.x</cite></small>
           </a>
           <button
           class="navbar-toggler"
