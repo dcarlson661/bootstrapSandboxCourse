@@ -22,6 +22,17 @@
             margin-left: 2px;
             margin-right: 2px;
         }
+      .my-check-box {
+        margin-left: 18px;
+    margin-top: 3px;
+      }
+      .my-check-box input {
+    margin-right: 10px;
+}
+      .fa {
+    padding: 0 10px;
+}
+
     </style>
 
     <script>
@@ -169,15 +180,15 @@
                 <button class="btn btn-sm btn-success" type="button" onclick="ToggleStreetView()">
                   <i class="fa fa-street-view fa-sm"></i>Street View</button>
               </li>
-              <li class="navbar-item">
+              <li class="navbar-item my-check-box">
                 <input type="checkbox" onclick=onCheckChanged(this) id="Radar"  value="Radar"></input>     
                 <label for="Radar" class="btn-success"> Radar</label><br>
               </li> 
-              <li class="navbar-item">
+              <li class="navbar-item my-check-box">
                 <input type="checkbox"  onclick=onCheckChanged(this) id="Traffic" value="Trf"></input>
                 <label for="Traffic" class="btn-success"> Traffic</label><br>
               </li>
-              <li class="navbar-item">
+              <li class="navbar-item my-check-box">
                 <input type="checkbox"  onclick=onCheckChanged(this) id="Test" value="Test"></input>
                 <label for="Test" class="btn-success"> Test</label><br>
               </li>
