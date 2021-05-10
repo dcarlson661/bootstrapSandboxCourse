@@ -199,34 +199,30 @@
               </li>
               <li class="navbar-item">
                 <button class="btn btn-sm " type="button" id="searchbtn"  onclick="CallSearch()">
-                  <i class="fa fa-map-signs"></i>
-                  MapPlaces</button>
+                  <img class="fa" src="images/Teardrop2.png"></img>
+                  Go Places (above)
+                </button>
               </li>     
               <li class="navbar-item">
-                <button class="btn btn-sm " type="button" onclick="setViewAllMarkers()">
-                  <i class="fa fa-skyatlas"></i>
-                  View all markers
+                <button class="btn btn-sm " type="button" onclick="ToggleStreetView()">
+                  <img class="fa" src="images/StreetView2.png"></img>
+                  Street View
                 </button>
               </li>
-              <li class="navbar-item">
-                <button class="btn btn-sm " type="button" onclick="ToggleStreetView()">
-                  <i class="fa fa-street-view fa-sm"></i> Street View</button>
-              </li>
-              <li class="navbar-item my-check-box">
-                <input type="checkbox" onclick=onCheckChanged(this) id="Radar"  value="Radar"></input>     
-                <label for="Radar"> Radar</label><br>
-              </li> 
               <li class="navbar-item my-check-box">
                 <input type="checkbox"  onclick=onCheckChanged(this) id="Traffic" value="Trf"></input>
-                <label for="Traffic" > Show Current Traffic</label><br>
+                <img class="fa" src="images/Traffic2.png"></img>
+                <label for="Traffic" > Traffic</label><br>
               </li>
               <li class="navbar-item my-check-box">
                 <input type="checkbox" onclick=onCheckChanged(this) id="ViewAsMap" value="asmap"></input>
-                <label for="ViewAsMap" > Toggle Map as Roadmap or Satellite</label><br>
+                <img class="fa" src="images/Satellite2.png"></img>
+                <label for="ViewAsMap" > Roadmap/Satellite</label><br>
               </li>
               <li class="navbar-item my-check-box">
                   <input type="checkbox" onclick=onCheckChanged(this) id="ViewAsHybredOrTerrain" value="ashyte"></input>
-                  <label for="ViewAsHybredOrTerrain"> Toggle Map as hybred or terrain</label><br>
+                  <img class="fa" src="images/Terrain2.png"></img>
+                  <label for="ViewAsHybredOrTerrain"> Hybred/Terrain</label><br>
               </li>
               <li class="navbar-item my-check-box">
                 <input type="checkbox"  onclick=onCheckChanged(this) id="Test" value="Test"></input>
