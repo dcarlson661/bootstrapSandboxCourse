@@ -39,20 +39,17 @@
 
     <script>
 
-      function toggleDiv()
+      function toggleDiv(theEleName,theNewStyleNotUsed)
       {
-        //this is different in gmhost
-        //$("#my-nav-div").toggle();
-        //$("#right-panel").toggle();
-        var x = document.getElementById("my-nav-div");
-            if (window.getComputedStyle(x).visibility === "hidden")
-            {
-                DocSetEleVisibleById('my-nav-div', 'visible');
-            }
-            else
-            {
-                DocSetEleVisibleById('my-nav-div', 'hidden');
-            }
+        var x = document.getElementById(theEleName);//"my-nav-div");
+        if (window.getComputedStyle(x).visibility === "hidden")
+        {
+            DocSetEleVisibleById('my-nav-div', 'visible');
+        }
+        else
+        {
+            DocSetEleVisibleById('my-nav-div', 'hidden');
+        }
       }
       function DocSetEleVisibleById(id, newStyle) {
             var e              = document.getElementById(id);
@@ -82,7 +79,6 @@
       {
         document.getElementById('location').value = "";
       }
-
       function CallSearch(placesSearchWord)
       {
         var search = document.getElementById('location').value;
@@ -123,7 +119,6 @@
       {
         alert(opt.value);
       }
-
       function setViewAllMarkers(tfUnused)
       {
         alert("setviewallmarkers");
@@ -142,15 +137,11 @@
           map.fitBounds(bounds);
           //map.setZoom(map.getZoom() - 1);
       }
-
       function ToggleStreetView()
       {
         alert("toggle street view");
           //streetView("use", "center");
       }
-
-      //called on flyto button click to locate the address or lat,lon in the textbox
-      // or to do radar or text google places search search
       function flyTo() 
       {
         var address = document.getElementById("location").value;
@@ -187,7 +178,7 @@
           class="navbar-toggler"
           data-toggle="collapse"
           data-target="#navbarNavF3BAD" 
-          onclick="toggleDiv()"
+          onclick="toggleDiv('my-nav-div','nothing')"
           >
           <i class="fa fa-bars"></i>
           </button>
