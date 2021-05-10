@@ -44,11 +44,11 @@
         var x = document.getElementById(theEleName);//"my-nav-div");
         if (window.getComputedStyle(x).visibility === "hidden")
         {
-            DocSetEleVisibleById('my-nav-div', 'visible');
+            DocSetEleVisibleById(theEleName, 'visible');
         }
         else
         {
-            DocSetEleVisibleById('my-nav-div', 'hidden');
+            DocSetEleVisibleById(theEleName, 'hidden');
         }
       }
       function DocSetEleVisibleById(id, newStyle) {
@@ -145,9 +145,8 @@
       function flyTo() 
       {
         var address = document.getElementById("location").value;
-        console.log(address);
-        //alert(address);
-        collapse();
+        console.log   (address);
+        toggleDiv     ('my-nav-div','nothing')
       }
     </script>
 
