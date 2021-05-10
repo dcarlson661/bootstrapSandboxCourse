@@ -39,6 +39,25 @@
 
     <script>
 
+      function toggleDiv()
+      {
+        //this is different in gmhost
+        //$("#my-nav-div").toggle();
+        //$("#right-panel").toggle();
+        var x = document.getElementById("my-nav-div");
+            if (window.getComputedStyle(x).visibility === "hidden")
+            {
+                DocSetEleVisibleById('my-nav-div', 'visible');
+            }
+            else
+            {
+                DocSetEleVisibleById('my-nav-div', 'hidden');
+            }
+      }
+      function DocSetEleVisibleById(id, newStyle) {
+            var e              = document.getElementById(id);
+            e.style.visibility = newStyle;
+        }
       function collapse()
       {
         let navMain = $("navbarNavF3");
@@ -160,10 +179,15 @@
             /> -->
             <small class="text-center text-dark">MultiMeterViewer</small>
           </a>
+          <!-- by putting a bad target the whole collapse div doesn't pop up
+               b/c i added the toggle() to hide/show a div that ass all i need
+               but i can make it 50% instead of the whole width     
+          -->
           <button
           class="navbar-toggler"
           data-toggle="collapse"
-          data-target="#navbarNavF3"
+          data-target="#navbarNavF3BAD" 
+          onclick="toggleDiv()"
           >
           <i class="fa fa-bars"></i>
           </button>
@@ -171,7 +195,7 @@
           <form class="form-control-sm ">
               <input type="text" 
                     name="product"  
-                    id="location" 
+                    id="location_FirstIdWinsSoThisIsChangedSoTheMyDivLocationGetsTheID" 
                     class="form-control input-sm" 
                     placeholder="Click for suggestions or type in your own. DOUBLE-Click to clear."
                     autocomplete="off"
@@ -231,7 +255,78 @@
           </ul>
           </div>
       </div>
-    </nav>   
+    </nav>  
+
+  <div id="my-nav-div"  style="visibility: hidden; width: 50%; background-color: #f0f0f0; ">
+    <form class="form-control-sm ">
+      <input type="text" 
+            name="product"  
+            id="location" 
+            class="form-control input-sm" 
+            placeholder="Click for suggestions or type in your own. DOUBLE-Click to clear."
+            autocomplete="off"
+            onkeypress="handle(event)"
+            ondblclick="clearLocation()"
+            list="productName" 
+            />
+      <datalist id="productName">
+          <option value="airport">airport</option>
+          <option value="city_hall">city_hall</option>
+          <option value="fire_station">fire_station</option>
+          <option value="hospital">hospital</option>
+          <option value="school">school</option>
+          <option value="stadium">stadium</option>
+          <option value="university" onclick="onOptionClick(this)" id="university">university</option>
+          <option value="28320 Constellation Road, Valencia, Ca. 91355"></option>
+      </datalist>
+  </form>  
+    <ul class="navbar-nav">
+      <li >
+        <button class="btn  btn-sm"" type="button" onclick="flyTo()">
+          <img class="fa" src="images/map2.png"></img>
+          Go (above)
+        </button>
+      </li>
+      <li class="navbar-item">
+        <button class="btn btn-sm " type="button" id="searchbtn"  onclick="CallSearch()">
+          <img class="fa" src="images/Teardrop2.png"></img>
+          Go Places (above)
+        </button>
+      </li>     
+      <li class="navbar-item">
+        <button class="btn btn-sm " type="button" onclick="ToggleStreetView()">
+          <img class="fa" src="images/StreetView2.png"></img>
+          Street View
+        </button>
+      </li>
+      <li class="navbar-item my-check-box">
+        <input type="checkbox"  onclick=onCheckChanged(this) id="Traffic" value="Trf"></input>
+        <img class="fa" src="images/Traffic2.png"></img>
+        <label for="Traffic" > Traffic</label><br>
+      </li>
+      <li class="navbar-item my-check-box">
+        <input type="checkbox" onclick=onCheckChanged(this) id="ViewAsMap" value="asmap"></input>
+        <img class="fa" src="images/Satellite2.png"></img>
+        <label for="ViewAsMap" > Roadmap/Satellite</label><br>
+      </li>
+      <li class="navbar-item my-check-box">
+          <input type="checkbox" onclick=onCheckChanged(this) id="ViewAsHybredOrTerrain" value="ashyte"></input>
+          <img class="fa" src="images/Terrain2.png"></img>
+          <label for="ViewAsHybredOrTerrain"> Hybred/Terrain</label><br>
+      </li>
+      <li class="navbar-item my-check-box">
+        <input type="checkbox"  onclick=onCheckChanged(this) id="Test" value="Test"></input>
+        <label for="Test" > Test</label><br>
+      </li>
+  </ul>
+  </div> 
+
+  <div id="right-panel" style="visibility: visible">
+      <h4>Results</h4>
+      <button id="more">Load more results</button>
+      <!--a list of the places loaded so far. just info-->
+      <ul id="places"></ul> 
+  </div> 
 
     <br />
     <br />
