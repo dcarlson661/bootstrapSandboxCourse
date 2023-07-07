@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+
+    <title>Bootstrap Sandbox</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="display-3 text-center my-4">Grid System</h1>
+
+    </header>
+
+    <div class="container">
+      <!--####################START HERE####################-->
+        <!-- EQUAL WIDTH MULTI ROW -->
+        <div class="row">
+            <div class="w-100 " style="margin-left: auto; margin-right: auto; text-align: center;">w-100 TOP</div>
+            <div class="col" style="border: 1px solid #333;">Equal Width Multi</div>
+            <div class="col" style="border: 1px solid #333;">Equal Width Multi</div>
+            <div class="w-100" style="border: 1px solid #333;">w-100 Middle</div>
+            <div class="col" style="border: 1px solid #333;">Equal Width Multi</div>
+            <div class="col" style="border: 1px solid #333;">Equal Width Multi</div>
+        </div>
+
+    <hr>
+
+     <!-- NESTING -->
+      <div class="row">
+        <div class="col-sm-9" style="border: 1px solid blue;">
+            Thu, 06 Jul 2023 18:51:14 GMT
+          <div class="row">
+            <div class="col-8 col-sm-6 bg-info" style="border: 1px solid red;">
+                Level 2: .col-8 .col-sm-6
+              </div>
+              <div class="col-4 col-sm-6 bg-warning" style="border: 1px solid red;">
+                Level 2: .col-4 .col-sm-6
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+
+      <!--"col-12 col-md-6 col-lg-4 "   "col-sm col-md-4"  "btn btn-info btn-block" 
+
+        style="white-space: normal;"
+
+        the up down buttons
+         class="btn btn-info btn-block" style="white-space: normal;"
+    -->
+
+      <div id="mainrow" class="row g-1 bg-dark">
+        <div class="w-100" style="margin-left: auto; margin-right: auto; text-align: center;">
+            <span id="Label2" class="StrongText" style="color:White;font-size:X-Large;font-weight:bold;">Thu, 06 Jul 2023 18:51:14 GMT</span>
+        </div> 
+
+         <div class="col-sm-6 col-md-6">
+                <div id="CardRepeaterID_ctl00_CardInfo_12061" class="card">
+                <div class="card-header bg-success" id="CardHeader12061">
+                    <div class="row">
+                        <img src="https://seeicbrne.net/meterportal/images/smartlinc.jpg" 
+                        class="col img-thumbnail mr-1" 
+                        style="max-height: 50px; max-width: 50px;" 
+                        data-parent="#accordion" data-toggle="collapse" alt="smartlinc.jpg"> 
+                    <a href="#12061" class="col btn btn-info btn-block" style="white-space: normal;" 
+                             data-parent="#accordion" data-toggle="collapse">
+                        ▼ 12061 lbr-1_SmartLINC_1 ▲ 
+                    </a>      
+                    </div>
+
+                </div>
+                <div id="12061" class="collapse ">
+                <div class="card-body bg-info">
+                    <div id="CardRepeaterID_ctl00_PanelCard12061" class="w-100 <%#Eval(&quot;cardcolor&quot;)%>">
+                    <table id="CardRepeaterID_ctl00_sensorTable12061" class="table table-bordered white-space:pre-wrap; word-break:break-word">
+                  <tbody><tr style="background-color:LightGrey;">
+                    <td>Sensor</td><td class="word-break: break-word;">Value</td><td>Unit</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_0_12061_BatRemainChrg" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_0_BatRemainChrg">BatRemainChrg</td><td id="CardRepeaterID_ctl00_value_12061_0_BatRemainChrg" class="word-break: break-word;">100</td><td id="CardRepeaterID_ctl00_unit_12061_0_BatRemainChrg">%</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_1_12061_BatHealth" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_1_BatHealth">BatHealth</td><td id="CardRepeaterID_ctl00_value_12061_1_BatHealth" class="word-break: break-word;">Good</td><td id="CardRepeaterID_ctl00_unit_12061_1_BatHealth">String</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_2_12061_BatTemp" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_2_BatTemp">BatTemp</td><td id="CardRepeaterID_ctl00_value_12061_2_BatTemp" class="word-break: break-word;">93.20</td><td id="CardRepeaterID_ctl00_unit_12061_2_BatTemp">°F</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_3_12061_BatCharging" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_3_BatCharging">BatCharging</td><td id="CardRepeaterID_ctl00_value_12061_3_BatCharging" class="word-break: break-word;">AC</td><td id="CardRepeaterID_ctl00_unit_12061_3_BatCharging">String</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_4_12061_Operator" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_4_Operator">Operator</td><td id="CardRepeaterID_ctl00_value_12061_4_Operator" class="word-break: break-word;">FirstNet</td><td id="CardRepeaterID_ctl00_unit_12061_4_Operator">String</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_5_12061_Band" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_5_Band">Band</td><td id="CardRepeaterID_ctl00_value_12061_5_Band" class="word-break: break-word;">14</td><td id="CardRepeaterID_ctl00_unit_12061_5_Band">Band</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_6_12061_RSRP" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_6_RSRP">RSRP</td><td id="CardRepeaterID_ctl00_value_12061_6_RSRP" class="word-break: break-word;">-77.0</td><td id="CardRepeaterID_ctl00_unit_12061_6_RSRP">Power</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_7_12061_RSRQ" style="background-color: lawngreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_7_RSRQ">RSRQ</td><td id="CardRepeaterID_ctl00_value_12061_7_RSRQ" class="word-break: break-word;">-9.0</td><td id="CardRepeaterID_ctl00_unit_12061_7_RSRQ">Quality</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_8_12061_RAM_Free" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_8_RAM_Free">RAM Free</td><td id="CardRepeaterID_ctl00_value_12061_8_RAM_Free" class="word-break: break-word;">1587.0</td><td id="CardRepeaterID_ctl00_unit_12061_8_RAM_Free">MB</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_9_12061_RAM_Total" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_9_RAM_Total">RAM Total</td><td id="CardRepeaterID_ctl00_value_12061_9_RAM_Total" class="word-break: break-word;">3743.0</td><td id="CardRepeaterID_ctl00_unit_12061_9_RAM_Total">MB</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_10_12061_MemoryFree" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_10_MemoryFree">MemoryFree</td><td id="CardRepeaterID_ctl00_value_12061_10_MemoryFree" class="word-break: break-word;">42</td><td id="CardRepeaterID_ctl00_unit_12061_10_MemoryFree">GB</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_11_12061_MemoryTotal" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_11_MemoryTotal">MemoryTotal</td><td id="CardRepeaterID_ctl00_value_12061_11_MemoryTotal" class="word-break: break-word;">64</td><td id="CardRepeaterID_ctl00_unit_12061_11_MemoryTotal">GB</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_12_12061_Uptime" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_12_Uptime">Uptime</td><td id="CardRepeaterID_ctl00_value_12061_12_Uptime" class="word-break: break-word;">PT171H57M20.305S</td><td id="CardRepeaterID_ctl00_unit_12061_12_Uptime">ISO 8601</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_13_12061_SSID" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_13_SSID">SSID</td><td id="CardRepeaterID_ctl00_value_12061_13_SSID" class="word-break: break-word;">Ralph</td><td id="CardRepeaterID_ctl00_unit_12061_13_SSID">WiFi</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_14_12061_IMEI" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_14_IMEI">IMEI</td><td id="CardRepeaterID_ctl00_value_12061_14_IMEI" class="word-break: break-word;">c0f1ee1cd1d4ab5d</td><td id="CardRepeaterID_ctl00_unit_12061_14_IMEI">EqID</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_15_12061_BTName" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_15_BTName">BTName</td><td id="CardRepeaterID_ctl00_value_12061_15_BTName" class="word-break: break-word;">OfficeDevPhoneKyoCell</td><td id="CardRepeaterID_ctl00_unit_12061_15_BTName">BTDesc</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_16_12061_GPS_OK" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_16_GPS_OK">GPS OK</td><td id="CardRepeaterID_ctl00_value_12061_16_GPS_OK" class="word-break: break-word;">9 Satellites</td><td id="CardRepeaterID_ctl00_unit_12061_16_GPS_OK">UsedInFix</td>
+                  </tr><tr id="CardRepeaterID_ctl00_Row_17_12061_LastGPS" style="background-color:LawnGreen;">
+                    <td id="CardRepeaterID_ctl00_sensor_12061_17_LastGPS">LastGPS</td><td id="CardRepeaterID_ctl00_value_12061_17_LastGPS" class="word-break: break-word;">07-06-2023 11:51:11</td><td id="CardRepeaterID_ctl00_unit_12061_17_LastGPS">DateTime</td>
+                  </tr>
+                    </tbody></table>
+                </div>
+                    <p id="CardRepeaterID_ctl00_myP" class="card-text">I=hillside  Bat=100%   </p>
+                    <input type="hidden" name="CardRepeaterID$ctl00$hiddenHL" id="CardRepeaterID_ctl00_hiddenHL" value="BatRemainChrg;100;%;Green;BatHealth;Good;String;Green;BatTemp;93.20;°F;Green;BatCharging;AC;String;Green;Operator;FirstNet;String;Green;Band;14;Band;Green;RSRP;-78.0;Power;Green;RSRQ;-10.0;Quality;Green;RAM Free;1581.0;MB;Green;RAM Total;3743.0;MB;Green;MemoryFree;42;GB;Green;MemoryTotal;64;GB;Green;Uptime;PT171H56M10.391S;ISO 8601;Green;SSID;Ralph;WiFi;Green;IMEI;c0f1ee1cd1d4ab5d;EqID;Green;BTName;OfficeDevPhoneKyoCell;BTDesc;Green;GPS OK;6 Satellites;UsedInFix;Green;LastGPS;07-06-2023 11:50:03;DateTime;Green;">
+                    <input type="hidden" name="CardRepeaterID$ctl00$hiddenActID" id="CardRepeaterID_ctl00_hiddenActID" value="12061">
+                    <div id="Content12061" class="contextdivs">
+                        Reserved Content
+                    </div>
+                    <a href="#" class="btn btn-secondary">Top</a>
+                </div>
+                </div>
+                </div>
+         </div> 
+
+         
+         <div class="col-sm-6 col-md-4">
+                <div id="CardRepeaterID_ctl01_CardInfo_12153" class="card">
+                <div class="card-header bg-success" id="CardHeader12153">
+                 
+                    <img src="https://seeicbrne.net/meterportal/images/AccuRad.gif" class="img-thumbnail align-self-start mr-3" style="max-height: 50px; max-width: 50px; min-width:50px;" data-parent="#accordion" data-toggle="collapse" alt="AccuRad.gif"> 
+                    <a href="#12153" class="btn btn-info btn-block" style="white-space: normal;" data-parent="#accordion" data-toggle="collapse">
+                        ▼ 12153 SEE_accurad_Field3 ▲ 
+                    </a>
+                    
+                </div>
+                <div id="12153" class="collapse ">
+                <div class="card-body bg-info">
+                    
+                    <div id="CardRepeaterID_ctl01_PanelCard12153" class="w-100 <%#Eval(&quot;cardcolor&quot;)%>">
+	
+                    <table id="CardRepeaterID_ctl01_sensorTable12153" class="table table-bordered white-space:pre-wrap; word-break:break-word">
+                      <tbody><tr style="background-color:LightGrey;">
+                        <td>Sensor</td><td class="word-break: break-word;">Value</td><td>Unit</td>
+                      </tr><tr id="CardRepeaterID_ctl01_Row_0_12153_headline____Dose" style="background-color:LawnGreen;">
+                        <td id="CardRepeaterID_ctl01_sensor_12153_0_headline____Dose">{"headline": "Dose</td><td id="CardRepeaterID_ctl01_value_12153_0_headline____Dose" class="word-break: break-word;">7.74</td><td id="CardRepeaterID_ctl01_unit_12153_0_headline____Dose">μrem</td>
+                      </tr><tr id="CardRepeaterID_ctl01_Row_1_12153_Counts" style="background-color:LawnGreen;">
+                        <td id="CardRepeaterID_ctl01_sensor_12153_1_Counts">Counts</td><td id="CardRepeaterID_ctl01_value_12153_1_Counts" class="word-break: break-word;">11</td><td id="CardRepeaterID_ctl01_unit_12153_1_Counts">cps</td>
+                      </tr><tr id="CardRepeaterID_ctl01_Row_2_12153_Counter" style="background-color:LawnGreen;">
+                        <td id="CardRepeaterID_ctl01_sensor_12153_2_Counter">Counter</td><td id="CardRepeaterID_ctl01_value_12153_2_Counter" class="word-break: break-word;">24021</td><td id="CardRepeaterID_ctl01_unit_12153_2_Counter">long</td>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                    <p id="CardRepeaterID_ctl01_myP" class="card-text">I=MyIncident Bat=100%   </p>
+                    <input type="hidden" name="CardRepeaterID$ctl01$hiddenHL" id="CardRepeaterID_ctl01_hiddenHL" value="{&quot;headline&quot;: &quot;Dose;6.01;µrem;Green;Counts;10;cps;Green;Counter;23976;long;Green;&quot;}">
+                    <input type="hidden" name="CardRepeaterID$ctl01$hiddenActID" id="CardRepeaterID_ctl01_hiddenActID" value="12153">
+                    <div id="Content12153" class="contextdivs">
+                        Reserved Content
+                    </div>
+                    <a href="#" class="btn btn-secondary">Top</a>
+                </div>
+                </div>
+                </div>
+         </div>
+
+         
+         <div class="col-sm-6 col-md-4 ">
+                <div id="CardRepeaterID_ctl02_CardInfo_12150" class="card">
+                <div class="card-header bg-success" id="CardHeader12150">
+                    <img src="https://seeicbrne.net/meterportal/images/identiFinder.jpg" class="img-thumbnail align-self-start mr-3" style="max-height: 50px; max-width: 50px; min-width:50px;" data-parent="#accordion" data-toggle="collapse" alt="identiFinder.jpg"> 
+                    <a href="#12150" class="btn btn-info btn-block" style="white-space: normal;" data-parent="#accordion" data-toggle="collapse">
+                        ▼ 12150 SEE_identiFinder2_IDENTFLIT ▲ 
+                    </a>
+                </div>
+                <div id="12150" class="collapse ">
+                <div class="card-body bg-info">
+                    
+                    <div id="CardRepeaterID_ctl02_PanelCard12150" class="w-100 <%#Eval(&quot;cardcolor&quot;)%>">
+	
+                    <table id="CardRepeaterID_ctl02_sensorTable12150" class="table table-bordered white-space:pre-wrap; word-break:break-word">
+                        <tbody><tr style="background-color:LightGrey;">
+                          <td>Sensor</td><td class="word-break: break-word;">Value</td><td>Unit</td>
+                        </tr><tr id="CardRepeaterID_ctl02_Row_0_12150_DoseRate" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl02_sensor_12150_0_DoseRate">DoseRate</td><td id="CardRepeaterID_ctl02_value_12150_0_DoseRate" class="word-break: break-word;">8</td><td id="CardRepeaterID_ctl02_unit_12150_0_DoseRate">µrem⁄h</td>
+                        </tr><tr id="CardRepeaterID_ctl02_Row_1_12150_Isotope" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl02_sensor_12150_1_Isotope">Isotope</td><td id="CardRepeaterID_ctl02_value_12150_1_Isotope" class="word-break: break-word;">[1 Cs-137 Usage:IND,Severity:Innocent]</td><td id="CardRepeaterID_ctl02_unit_12150_1_Isotope">s</td>
+                        </tr><tr id="CardRepeaterID_ctl02_Row_2_12150_Neutron" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl02_sensor_12150_2_Neutron">Neutron</td><td id="CardRepeaterID_ctl02_value_12150_2_Neutron" class="word-break: break-word;">0.000</td><td id="CardRepeaterID_ctl02_unit_12150_2_Neutron">cps</td>
+                        </tr><tr id="CardRepeaterID_ctl02_Row_3_12150_N42" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl02_sensor_12150_3_N42">N42</td><td id="CardRepeaterID_ctl02_value_12150_3_N42" class="word-break: break-word;">ID2_Sn910383-86_20230703_175455.N42</td><td id="CardRepeaterID_ctl02_unit_12150_3_N42">fn</td>
+                        </tr>
+                      </tbody></table>
+                    </div>
+                    <p id="CardRepeaterID_ctl02_myP" class="card-text">I=testincident Bat=100%   </p>
+                    <input type="hidden" name="CardRepeaterID$ctl02$hiddenHL" id="CardRepeaterID_ctl02_hiddenHL" value="DoseRate;6;µrem/h;Green;Isotope;[1 Cs-137 Usage:IND,Severity:Innocent];s;Green;Neutron;0.000;cps;Green;N42;ID2_Sn910383-86_20230703_175455.N42;fn;Green;">
+                    <input type="hidden" name="CardRepeaterID$ctl02$hiddenActID" id="CardRepeaterID_ctl02_hiddenActID" value="12150">
+                    <div id="Content12150" class="contextdivs">
+                        Reserved Content
+                    </div>
+                    <a href="#" class="btn btn-secondary">Top</a>
+                </div>
+                </div>
+                </div>
+         </div>
+
+         
+         <div class="col-sm-6 col-md-4">
+                <div id="CardRepeaterID_ctl03_CardInfo_12151" class="card">
+                <div class="card-header bg-success" id="CardHeader12151">
+                    <img src="https://seeicbrne.net/meterportal/images/xam8000.jpg" class="img-thumbnail align-self-start mr-3" style="max-height: 50px; max-width: 50px; min-width:50px;" data-parent="#accordion" data-toggle="collapse" alt="xam8000.jpg"> 
+                    <a href="#12151" class="btn btn-info btn-block" style="white-space: normal;" data-parent="#accordion" data-toggle="collapse">
+                        ▼ 12151 SEE_xam8000_Field3 ▲ 
+                    </a>
+                </div>
+                <div id="12151" class="collapse ">
+                <div class="card-body bg-info">
+                    
+                    <div id="CardRepeaterID_ctl03_PanelCard12151" class="w-100 <%#Eval(&quot;cardcolor&quot;)%>">
+	
+                    <table id="CardRepeaterID_ctl03_sensorTable12151" class="table table-bordered white-space:pre-wrap; word-break:break-word">
+                        <tbody><tr style="background-color:LightGrey;">
+                          <td>Sensor</td><td class="word-break: break-word;">Value</td><td>Unit</td>
+                        </tr><tr id="CardRepeaterID_ctl03_Row_0_12151_Count_dbg" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl03_sensor_12151_0_Count_dbg">Count_dbg</td><td id="CardRepeaterID_ctl03_value_12151_0_Count_dbg" class="word-break: break-word;">161315</td><td id="CardRepeaterID_ctl03_unit_12151_0_Count_dbg">int</td>
+                        </tr><tr id="CardRepeaterID_ctl03_Row_1_12151_ch4_CAT1" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl03_sensor_12151_1_ch4_CAT1">ch4_CAT1</td><td id="CardRepeaterID_ctl03_value_12151_1_ch4_CAT1" class="word-break: break-word;">0.00</td><td id="CardRepeaterID_ctl03_unit_12151_1_ch4_CAT1">%LEL</td>
+                        </tr><tr id="CardRepeaterID_ctl03_Row_2_12151_O2_EC1" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl03_sensor_12151_2_O2_EC1">O2_EC1</td><td id="CardRepeaterID_ctl03_value_12151_2_O2_EC1" class="word-break: break-word;">20.90</td><td id="CardRepeaterID_ctl03_unit_12151_2_O2_EC1">Vol%</td>
+                        </tr><tr id="CardRepeaterID_ctl03_Row_3_12151_CO_EC3" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl03_sensor_12151_3_CO_EC3">CO_EC3</td><td id="CardRepeaterID_ctl03_value_12151_3_CO_EC3" class="word-break: break-word;">0.00</td><td id="CardRepeaterID_ctl03_unit_12151_3_CO_EC3">ppm</td>
+                        </tr><tr id="CardRepeaterID_ctl03_Row_4_12151_H2S_EC5" style="background-color:LawnGreen;">
+                          <td id="CardRepeaterID_ctl03_sensor_12151_4_H2S_EC5">H2S_EC5</td><td id="CardRepeaterID_ctl03_value_12151_4_H2S_EC5" class="word-break: break-word;">0.00</td><td id="CardRepeaterID_ctl03_unit_12151_4_H2S_EC5">ppm</td>
+                        </tr>
+                      </tbody></table>
+                    </div>
+                    <p id="CardRepeaterID_ctl03_myP" class="card-text">I=testing Bat=100%   </p>
+                    <input type="hidden" name="CardRepeaterID$ctl03$hiddenHL" id="CardRepeaterID_ctl03_hiddenHL" value="Count_dbg;161273;int;green;ch4_CAT1;0.00;%LEL;Green;O2_EC1;20.90;Vol%;Green;CO_EC3;0.00;ppm;Green;H2S_EC5;0.00;ppm;Green;">
+                    <input type="hidden" name="CardRepeaterID$ctl03$hiddenActID" id="CardRepeaterID_ctl03_hiddenActID" value="12151">
+                    <div id="Content12151" class="contextdivs">
+                        Reserved Content
+                    </div>
+                    <a href="#" class="btn btn-secondary">Top</a>
+                </div>
+                </div>
+                </div>
+         </div>
+
+
+      </div>
+
+
+      <div style="margin-top: 500px;"></div>
+
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+  </body>
+</html>
